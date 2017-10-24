@@ -1,0 +1,48 @@
+<html lang='zh-cn'>
+<head>
+  <meta charset='utf-8'>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+    <body bgcolor='gray'>
+      <h1 align='center' color='blue'>叶聪的主页</h1>
+
+      <table width='1800'>
+        <tr>
+	  <td colspan=2>
+            <h1 align='center';color='blue'>欢迎！</h1>
+          </td>
+        </tr>
+
+        <tr>
+          <td style='background-color:yellow;width:500;height:400'>
+	  <p align='center'><img src='images/luhan.jpg' width='300' height='300'></p>
+          <p style='text-align:center'>假装这是我的照片</p>
+
+          </td>
+
+          <td rowspan='2' bgcolor='forestgreen' height='800'>
+            {% block contain %}{% endblock %}
+          </td>
+        </tr>
+	
+        <tr>
+          <td bgcolor='orange'>
+            <dl>
+              <dt>我的链接</dt>
+                <dd>
+                  <ul>
+                    <li><a href='http://www.baidu.com' target='_blank'>百度</a></li>
+                    <li><a href='https://www.github.com' target='_blank'>github</a></li>
+                    <li><a href='http://www.shiyanlou.com' target='_blank'>实验楼</a></li>
+                  </ul>
+                </dd>
+              </dt>
+            </dl>
+          </td>
+        </tr>
+      </table>
+    </body>
+</html>
+
+

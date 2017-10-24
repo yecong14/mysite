@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}blog titles{% endblock %}
+
+{% block contain %}
+<h1>我的博客</h1>
+<div>
+	<ul>
+		{% for blog in blogs %}
+			<li>{{ blog.title }}</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}
+
