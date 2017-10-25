@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}文章详情{% endblock %}
+
+{% block contain %}
+<h1>{{ blog.title }}</h1>
+
+<h2>{{ blog.author }}  {{ blog.publish }}</h2>
+<p>{{ blog.body }}</p>
+{% endblock %}
+
