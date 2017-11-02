@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Register user{% endblock %}
+{% block contain %}
+<div class='row text-center vertical-middle-sm'>
+	<h1>Register</h1>
+	<p>If you are a user,<strong><a href='{% url 'account:user_login' %}'>Login</a><strong>,please.</p>
+	<p>or register</p>
+	<form class='form-horizontal' action='.' method='post'>{% csrf_token %}
+	<label>username</label>{{ form.username }}<dr/><dr/>
+	<label>phone</label>{{ profile.phone }}<dr/><dr/>
+	<label>password</label>{{ form.password }}<dr/><dr/>
+	<label>confirm password</label>{{ form.password2 }}<dr/><dr/>
+	<input type='submit' value='REGISTER'>
+	</from>
+</div>
+{% endblock %}

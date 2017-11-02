@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Login{% endblock %}
+{% block contain %}
+<div align='center'>
+	<h1>Login</h1>
+	<p>Input your username and password</p>
+	<form class='form-horizontal' action='.' method='post'>{% csrf_token %}
+		 <label for='{{ form.username.id_for_label }}'>Username</label>
+		 {{ form.username }}<br/><br/>
+		 <label for='{{ form.password.id_for_label }}'>Password</label>
+		 {{ form.password }}<br/><br/>
+		<input type='submit' value='Login'>
+	</form>
+</div>
+{% endblock %}
