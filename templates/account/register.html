@@ -3,15 +3,16 @@
 {% block title %}Register user{% endblock %}
 {% block contain %}
 <div class='row text-center vertical-middle-sm'>
-	<h1>Register</h1>
-	<p>If you are a user,<strong><a href='{% url 'account:user_login' %}'>Login</a><strong>,please.</p>
-	<p>or register</p>
+	<h1>用户注册</h1>
+	<p>如果您已经是用户，请<strong><a href='{% url 'account:user_login' %}'>登陆</a><strong></p>
+	<p>否则请在此处注册</p>
 	<form class='form-horizontal' action='.' method='post'>{% csrf_token %}
-	<label>username</label>{{ form.username }}<dr/><dr/>
-	<label>phone</label>{{ profile.phone }}<dr/><dr/>
-	<label>password</label>{{ form.password }}<dr/><dr/>
-	<label>confirm password</label>{{ form.password2 }}<dr/><dr/>
-	<input type='submit' value='REGISTER'>
-	</from>
+		<p><label>用户名</label>{{ form.username }}</p>
+		<p><label>电话</label>{{ profile.phone }}</p>
+		<p><label>邮箱</label>{{ form.email }}</p>
+		<p><label>密码</label>{{ form.password }}</p>
+		<p><label>再次确认密码</label>{{ form.password2 }}</p>
+		<input type='submit' value='注册'>
+	</form>
 </div>
 {% endblock %}

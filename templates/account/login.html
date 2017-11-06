@@ -2,12 +2,15 @@
 {% block title %}Login{% endblock %}
 {% block contain %}
 <div align='center'>
-	<h1>Login</h1>
-	<p>Input your username and password</p>
+	<h1>登陆</h1>
+	<p>请输入您的用户名和密码</p>
 	<form class='form-horizontal' action='.' method='post'>{% csrf_token %}
-		 Username{{ form.username }}<br/><br/>
-		 password{{ form.password }}<br/><br/>
-		<input type='submit' value='Login'>
+		 用户名{{ form.username }}<br/><br/>
+		 密  码{{ form.password }}<br/><br/>
+		<input type='submit' value='登陆'>
 	</form>
+	<br/><br/>
+	<p>如果您忘记密码，请<a href='{% url 'account:password_reset' %}'>重置密码</a></p>
+	<p>如果您还不是用户，请<a href='{% url 'account:user_register' %}'>注册</a></p>
 </div>
 {% endblock %}
