@@ -123,3 +123,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
 LOGIN_REDIRECT_URL = '/blog/'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sina.com'
+EMAIL_HOST_USER = '535891464.student@sina.com.cn'
+EMAIL_HOST_PASSWORD = 'yecong14'
+EMAIL_PORT = 465 
+#EMAIL_USE_TLS =  False
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = '535891464.student@sina.com.cn'
