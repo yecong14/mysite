@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}my infomation{% endblock %}
+{% block contain %}
+<div class='row text-center vertical-middle-sm'>
+	<h1>我的信息</h1>
+	<p>用户名：{{ user.username }}</p>
+	<p>邮箱：{{ user.email }}</p>
+	<p>电话：{{ userprofie.phone }}</p>
+	<p>毕业院校：{{ userinfo.school }}</p>
+	<p>职业：{{ userinfo.profession }}</p>
+	<p>个人介绍：{{ userinfo.aboutme }}</p>
+</div>
+{% endblock %}

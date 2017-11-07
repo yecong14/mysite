@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}my infomation{% endblock %}
+{% block contain %}
+<div class='row text-center vertical-middle-sm'>
+	<h1>编辑个人信息</h1>
+	<form class='form-horizontal' action='.' method='post'>{% csrf_token %}
+	<p>用户名：{{ user.username }}</p>
+	<p>邮箱：{{ user_form.email }}</p>
+	<p>电话：{{ userprofie_from.phone }}</p>
+	<p>毕业院校：{{ userinfo_form.school }}</p>
+	<p>职业：{{ userinfo_form.profession }}</p>
+	<p>个人介绍：{{ userinfo_form.aboutme }}</p>
+	<input type='submit' value='保存个人信息'>
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Register successfull{% endblock %}
+{% block contain %}
+<div class='row text-center vertical-middle-sm'>
+	<h1>注册成功！</h1>
+	<p><strong><a href='{% url 'account:my_infomation' %}'>我的个人信息</a><strong></p>
+	<p><strong><a href='{% url 'blog:blog_title' %}'>我的博客文章</a><strong></p>
+</div>
+{% endblock %}
