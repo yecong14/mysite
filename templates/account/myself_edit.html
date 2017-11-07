@@ -6,7 +6,8 @@
 	<form class='form-horizontal' action='.' method='post'>{% csrf_token %}
 	<p>用户名：{{ user.username }}</p>
 	<p>邮箱：{{ user_form.email }}</p>
-	<p>电话：{{ userprofie_from.phone }}</p>
+	<p>电话：{{ userprofile_form.phone }}</p>
+	<p>生日：{{ userprofile_form.birth }}</p>
 	<p>毕业院校：{{ userinfo_form.school }}</p>
 	<p>职业：{{ userinfo_form.profession }}</p>
 	<p>个人介绍：{{ userinfo_form.aboutme }}</p>

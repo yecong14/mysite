@@ -9,5 +9,6 @@
 	<p>毕业院校：{{ userinfo.school }}</p>
 	<p>职业：{{ userinfo.profession }}</p>
 	<p>个人介绍：{{ userinfo.aboutme }}</p>
+	<p><a href='{% url 'account:edit_my_infomation' %}'>修改个人信息</a></p>
 </div>
 {% endblock %}
