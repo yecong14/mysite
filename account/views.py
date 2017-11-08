@@ -51,7 +51,7 @@ def myself(request):
 	user = User.objects.get(username=request.user.username)
 	userprofile = UserProfile.objects.get(user=user)
 	userinfo = UserInfo.objects.get(user=user)
-	return render(request,'account/myself.html',{'user':user,'userinfo':userinfo,'userprofile':userprofile})
+	return render(request,'account/myself2.html',{'user':user,'userinfo':userinfo,'userprofile':userprofile})
 
 @login_required(login_url='/account/login/')
 def myself_edit(request):
