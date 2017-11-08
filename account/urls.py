@@ -32,7 +32,8 @@ urlpatterns = [
                     {'template_name':'account/password_reset_complete.html'},
                     name='password_reset_complete'),
 				url(r'^my-infomation/$',views.myself,name='my_infomation'),
-				url(r'^edit-my-infomation/$',views.myself_edit,name='edit_my_infomation')
+				url(r'^edit-my-infomation/$',views.myself_edit,name='edit_my_infomation'),
+				url(r'^my-image/$',views.my_image,name='my_image'),
 
     ]
 
